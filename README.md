@@ -1,2 +1,3 @@
-# Token-Generator-AdvancedEncryption
-Mass token generator via different encryption modul and verification automatique
+# Discord Token Generator And AdvancedEncryption And Verificator.
+
+Mass Discord token generator via differents encryptions modules and auto verification files.
