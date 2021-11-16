@@ -26,9 +26,9 @@ class bcolors:
 
 client = discord.Client()
 
-async def get_user_exists(tup):
+async def get_user_exists(num):
     try:
-        await client.fetch_user(tup)
+        await client.fetch_user(num)
         return True
     except Exception as e:
         if e.code == 10013:
@@ -37,26 +37,15 @@ async def get_user_exists(tup):
 @tasks.loop(seconds = 2)
 async def execute():
     randomlist = []
-    num = random.randint(100000000000000000, 999999999999999999)
+    num = random.randint(100000000000000000,999999999999999999)
     sort = base64.b64encode(str(num).encode('utf-8'))
     encoded_sort = str(sort,'utf-8')
     current_timestamp = time.time()
     first_timestamp = (num / 4194304) + 1420070400000
-    normal = int(round(first_timestamp))
-    string_time = str(normal)
-    delta_time = string_time[:10]
-    genpoop = random.randint(1000000000, 5000000000)
-    genpoop2 = random.randint(5000000001, 9999999999)
-    randompoop = random.randint(genpoop, genpoop2)
-    randomgenpoop = randompoop * randompoop - 12345678
-    string_randomusepoop = str(randomgenpoop)
-    randomusepoop = string_randomusepoop[:10]
-    string_num = str(num)
-    omega_num = string_num[:8]
-    alpha_num = str(omega_num+randomusepoop)
-    theta_num = int(alpha_num)
-    #print(theta_num)
-    int_time = int(delta_time)
+    max_timestamp = str(current_timestamp).replace(".", "")
+    mod_min_timestamp = int(max_timestamp)
+    min_timestamp = str(first_timestamp).replace(".", "")
+    mod_max_timestamp = int(min_timestamp)
     if len(encoded_sort) != 24:
         return
     randomlist.append(encoded_sort)
@@ -67,18 +56,15 @@ async def execute():
         fingerprint = str(base64.b64encode(word.encode('utf-16')), 'utf-8').replace("/", "").replace("=", "")
     if len(fingerprint)!=6:
         return
-    if (1520070400  < int_time) and (int_time < 1620070400):
-        tup = theta_num
-        #print(tup, num)
-        result = await get_user_exists(tup)
-        print(f"cherche {tup} !")
-    else :
+    if (mod_max_timestamp > mod_min_timestamp < 14200704000000000000):
         return
+    print(f"cherche {num} !")
+    result = await get_user_exists(num)
     if result:
         print(result)
 
         with open("user.txt", "a") as file:
-            file.write("{}\n".format(tup))
+            file.write("{}\n".format(num))
 			
     key = str('b'+word).encode()
     def encrypt(password):
