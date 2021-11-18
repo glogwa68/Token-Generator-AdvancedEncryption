@@ -2,7 +2,7 @@
 Mass token generator via different encryption modul and verification automatique
 
 1) obtention de la token de bot: 
-1: generer une token discord sur : https://discord.com/developers/applications.
+1: generer une token discord sur : https://discord.com/developers/applications.                                                            
 2: allez dans l'onglet bot puis créé une nouvelle app.
 3: allez dans copié la clé secret.
   
