@@ -1,0 +1,36 @@
+Y(=1): cipher_text: 7
+Z(=2): cipher_text: 16  \\ salt: 3  \\ tag: 2
+M(=3): cipher_text: 34  \\ salt: 20
+Q(=4): tag: 20
+X(=5): ALL
+Q(=6): tag: 20
+
+.(none)7)
+
+1(=8): tag: 21
+b(=9): ALL
+O(=10): cipher_text: 33
+P(=11): cipher_text: 3
+q(=11): cipher_text: 19 \\ nonce: 4 \\ tag: 8
+Z(=12): cipher_text: 16  \\ salt: 3  \\ tag: 2
+S(=13): cipher_text: 23
+M(=14): cipher_text: 34  \\ salt: 20
+k(=15): salt: 13
+g(=16): nonce: 22 \\ tag: 22
+n(=17): cipher_text: 26 \\ nonce: 1
+L(=18): salt: 17  \\ tag: 15, 19
+m(=19): ALL
+N(=20): nonce: 11
+z(=21): cipher_text: 2
+j(=22): nonce: 2
+B(=23): nonce: 3
+o(=24): salt: 14, 19 \\ tag: 17
+f(=25): tag: 12
+n(=26): cipher_text: 26 \\ nonce: 1
+j(=27): nonce: 2
+-(=28): ALL or REPLACE + BY -
+7(=29): cipher_text: 22
+k(=30): salt: 13
+Z(=31): cipher_text: 2, 11, 16  \\ salt: 3  \\ tag: 2
+s(=32): salt: 2
+U(=33): cipher_text: 1, 17, 28 \\ tag: 5
